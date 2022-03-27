@@ -3,3 +3,13 @@
 # Формат выходных данных: Выведите «YES», если треугольник равнобедренный, и «NO» в противном случае.
 
 # TODO: your code here
+
+a = float(input("Сторона a: "))
+b = float(input("Сторона b: "))
+c = float(input("Сторона c: "))
+
+if a == b or b == c or a == c:
+    result="YES"
+else:
+    result="NO"
+print(result)
