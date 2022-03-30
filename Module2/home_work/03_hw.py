@@ -31,3 +31,7 @@
 # 20 199.8 Rub.
 
 # TODO: your code here
+x = float(input("x: "))
+for i in range(1, 21):
+    result = round(x * i, 2)
+    print(i, " ", result, " Rub.")
