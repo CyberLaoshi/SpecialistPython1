@@ -14,3 +14,20 @@
 #    #
 #    #
 ######
+
+a = int(input("a: "))
+for i in range(a):
+    if i == 0 or i == a-1:
+        hashtag = "#"
+        result = ""
+        for j in range(a):
+            result = result + hashtag
+        print(result)
+    if 0 < i < (a-1):
+        hashtag = "#"
+        space = " "
+        result = "#"
+        for j in range(a-2):
+            result = result + space
+        result += hashtag
+        print(result)
