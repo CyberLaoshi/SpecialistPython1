@@ -8,3 +8,16 @@
 # Например, 1 корова, 2 коровы, 5 коров, 125 коров.
 
 # TODO: your code here
+
+first_part = "На лугу пасется "
+n = int(input("n: "))
+
+if n % 10 == 1:
+    result = " корова"
+if 2 <= n % 10 <= 4:
+    result = " коровы"
+if 5 <= n <= 20 or 5 <= n % 10 <= 9 or n % 10 == 0:
+    result = " коров"
+
+
+print(first_part, n, result)
