@@ -10,3 +10,10 @@
 # 1234
 
 # TODO: your code here
+n = int(input("n: "))
+i = 1
+string = ""
+while i <= n:
+    string = string +str(i)
+    print(string)
+    i += 1
