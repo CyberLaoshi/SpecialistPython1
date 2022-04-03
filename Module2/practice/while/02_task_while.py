@@ -3,3 +3,6 @@
 # то программа запрашивает ввод снова.
 
 # TODO: your code here
+enough = ""
+while enough != "хватит":
+    enough = input("Enter the word: ")
