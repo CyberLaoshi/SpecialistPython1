@@ -18,3 +18,13 @@
 
 
 # TODO: your code here
+
+a = int(input("a: "))
+i = 1
+
+while i <= a:
+    string_list = list(" " * a)
+    string_list[i-1] = "#"
+    string_list[a-i] = "#"
+    print(''.join(string_list))
+    i += 1
