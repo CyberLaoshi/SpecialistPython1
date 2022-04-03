@@ -4,3 +4,6 @@
 fruits = ["яблоко", "банан", "киви", "ананас", "груша"]
 
 # TODO: your code here
+for count, value in enumerate(fruits):
+    count += 1
+    print(count, value)
