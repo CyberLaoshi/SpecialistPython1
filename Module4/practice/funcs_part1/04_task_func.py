@@ -3,8 +3,12 @@
 
 def can_triangle(p1, p2, p3):
     # TODO: your code here
-    pass
-
+    p1_p2_dist = ((p2[0]-p1[0]) ** 2 + (p2[1]-p1[1]) ** 2) ** .5
+    p2_p3_dist = ((p3[0] - p2[0]) ** 2 + (p3[1] - p2[1]) ** 2) ** .5
+    p1_p3_dist = ((p3[0] - p1[0]) ** 2 + (p3[1] - p1[1]) ** 2) ** .5
+    result = (p1_p2_dist + p2_p3_dist) > p1_p3_dist
+    print(result)
+    return result
 
 # Пример вызова функции
 can_triangle((10, 12), (14, 18), (12, 12))
