@@ -4,6 +4,19 @@
 # Подсказка: для нахождения площади используйте Теорему Герона
 
 # TODO: your code here
+a = (10, 12)
+b = (14, 18)
+c = (12, 12)
 
-
+def can_triangle(p1, p2, p3):
+    # TODO: your code here
+    p1_p2_dist = ((p2[0]-p1[0]) ** 2 + (p2[1]-p1[1]) ** 2) ** .5
+    p2_p3_dist = ((p3[0] - p2[0]) ** 2 + (p3[1] - p2[1]) ** 2) ** .5
+    p1_p3_dist = ((p3[0] - p1[0]) ** 2 + (p3[1] - p1[1]) ** 2) ** .5
+    if (p1_p2_dist + p2_p3_dist) > p1_p3_dist:
+        p = p1_p2_dist + p2_p3_dist + p1_p3_dist
+        size = (p * (p - p1_p2_dist) * (p - p2_p3_dist) * (p - p1_p3_dist)) ** .5
+        return p, size
+    return False
 # Не забудьте протестировать вашу функцию
+print(can_triangle(a, b, c))
