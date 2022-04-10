@@ -3,7 +3,13 @@
 
 def average(*args):
     # TODO: your code here
-    pass
+    # Вариант 1
+    total = 0
+    for arg in args:
+        total += arg
+    return total / len(args)
+    # Вариант 2
+    # return sum(args) / len(args)
 
 
 print(average(3, 4, 8))
