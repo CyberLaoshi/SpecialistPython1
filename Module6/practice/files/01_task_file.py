@@ -10,10 +10,20 @@ path = "dir/limericks.txt"  # вместо dir подставь название
 # Или удалите dir, если limericks.txt в той же папке, что и текущий файл
 
 # Открываем файл на чтение
-f = open(path, "r")
+f = open("dir/limericks.txt", "r", encoding="utf-8")
 # В переменную line считываем строку за стройкой из файла(f)
+nonspace_count = 0
+lines_number = 0
 for line in f:
-    ...
+    # line = line.replace(" ", "")
+    # line = line.replace("\n", "")
+    # line = line.replace("\t", "")
+    for symbol in [",", ".", "!", ":", ";", "«", "»", "—"]:
+        nonspace_count = nonspace_count + line.count(symbol)
+for line in f:
+    print(len(line.rstrip()))
 
+print("\n","Число непробельных символов: ", nonspace_count)
+# print("\n","Число стихов: ", lines_number)
 # Подсказка: пустые строки выглядят так "\n". Помните? Строка считывается вместе с символом переноса!
 # Применение метода "\n".rstrip() --> "" вернет вам пустую строку, строку из НУЛЯ символов.
