@@ -13,3 +13,20 @@
 prices = []
 
 # Подсказка: для преобразования строки в список вспомните про метод строки .split()
+
+# 1. На какую сумму было продано товаров
+f = open("dir/sold.txt")
+for line in f:
+    line = line.replace("  ", " ")
+    for item in line.split(" "):
+        prices.append(float(item))
+print("Список цен: ", *prices)
+total = sum(prices)
+print(f"Продано товаров на сумму: {total}")
+f.seek(0)
+
+# 2. Цену самого дорогого товара
+print(f"Цена самого дорогого товара: {max(prices)}")
+
+# 3. Цену самого дешевого товара
+print(f"Цена самого дешевого товара: {min(prices)}")
