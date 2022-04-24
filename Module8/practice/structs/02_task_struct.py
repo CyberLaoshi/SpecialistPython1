@@ -5,3 +5,31 @@
 #   например, lst = [1, 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 2, 4, 5, 6]
 #   2. элементы исходного списка, которые не имеют повторений(встречаются только один раз):
 #   например, lst = [1 , 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 4, 6]
+import random
+
+i = 10
+low_range = 0
+high_range = 10
+lst = []
+for _ in range(i):
+    lst.append(random.randint(low_range, high_range))
+print(lst)
+
+#   1. неповторяющиеся(уникальные) элементы исходного списка:
+#   например, lst = [1, 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 2, 4, 5, 6]
+lst2 = []
+def unique_in_list(num):
+    if num not in lst2:
+        lst2.append(num)
+        return num
+lst2 = list(map(unique_in_list, lst))
+res1 = list(filter(None, lst2))
+print(res1)
+#   2. элементы исходного списка, которые не имеют повторений(встречаются только один раз):
+#   например, lst = [1 , 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 4, 6]
+num_times = {}
+for el in res1:
+    num_times[el] = lst.count(el)
+num_once = [num for num, times in num_times.items() if times == 1]
+print(num_once)
+
